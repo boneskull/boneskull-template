@@ -4,7 +4,7 @@ extends:
   - semistandard
   - plugin:prettier/recommended
 rules:
-  standard/computed-property-even-spacing: false
+  standard/computed-property-even-spacing: off
 overrides:
   - files:
       - .mocharc.js
