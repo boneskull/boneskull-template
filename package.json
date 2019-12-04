@@ -5,7 +5,7 @@
   "description": "Shankle short loin porchetta strip steak tongue drumstick shoulder shank turkey pork loin picanha flank.",
   "main": "src/index.js",
   "scripts": {
-    "posttest": "markdownlint --ignore node_modules . && eslint .",
+    "posttest": "markdownlint \"*.md\" && eslint .",
     "test": "nyc mocha \"test/**/*.spec.js\"",
     "release": "standard-version"
   },
