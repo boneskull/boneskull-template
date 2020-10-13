@@ -17,7 +17,7 @@
   "author": "Christopher Hiller <boneskull@boneskull.com> (https://boneskull.com/)",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "dependencies": {},
   "devDependencies": {
