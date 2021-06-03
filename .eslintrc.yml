@@ -1,5 +1,7 @@
 root: true
 parser: '@babel/eslint-parser'
+parserOptions:
+  requireConfigFile: false
 extends:
   - semistandard
   - plugin:prettier/recommended
@@ -17,4 +19,3 @@ overrides:
     globals:
       expect: false
       sinon: false
-      proxyquire: false
