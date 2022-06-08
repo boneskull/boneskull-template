@@ -14,7 +14,6 @@
   "scripts": {
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "release": "standard-version",
     "test": "mocha \"test/**/*.spec.js\"",
     "posttest": "markdownlint-cli2 \"*.md\" && eslint ."
   },
@@ -47,7 +46,6 @@
     "markdownlint-cli2": "0.4.0",
     "mocha": "9.2.2",
     "prettier": "2.6.2",
-    "standard-version": "9.3.2",
     "unexpected": "12.0.4"
   },
   "engines": {
