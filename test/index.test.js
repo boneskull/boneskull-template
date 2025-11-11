@@ -1,5 +1,5 @@
-import { describe, it } from 'node:test';
 import { expect } from 'bupkis';
+import { describe, it } from 'node:test';
 
 describe('placeholder test suite', () => {
   it('should pass a basic assertion', () => {

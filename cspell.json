@@ -29,7 +29,5 @@
     "worktrees"
   ],
   "ignoreRandomStrings": true,
-  "ignoreWords": [
-    "boneskull"
-  ]
+  "ignoreWords": ["boneskull"]
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  timeout: '2s',
+  'forbid-only': Boolean(process.env.CI),
   slow: '1s',
-  'forbid-only': Boolean(process.env.CI)
+  timeout: '2s',
 };
