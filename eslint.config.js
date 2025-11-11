@@ -3,10 +3,11 @@ import jsPlugin from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
 import perfectionist from 'eslint-plugin-perfectionist';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
   jsPlugin.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   perfectionist.configs['recommended-natural'],
