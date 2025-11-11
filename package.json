@@ -18,7 +18,7 @@
     "fix:pkg": "npm pkg fix",
     "fix:prettier": "prettier --write . && markdownlint-cli2 --fix \"**/*.md\"",
     "lint": "run-p -sl --aggregate-output lint:*",
-    "lint:commit": "commitlint",
+    "commitlint": "commitlint",
     "lint:eslint": "eslint .",
     "lint:knip": "knip",
     "lint:markdown": "markdownlint-cli2 \"**/*.md\"",
