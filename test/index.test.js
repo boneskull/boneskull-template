@@ -3,11 +3,11 @@ import { expect } from 'bupkis';
 
 describe('placeholder test suite', () => {
   it('should pass a basic assertion', () => {
-    expect(true).toBe(true);
+    expect(true, 'to be true');
   });
 
   it('should handle equality', () => {
     const result = 1 + 1;
-    expect(result).toBe(2);
+    expect(result, 'to equal', 2);
   });
 });
