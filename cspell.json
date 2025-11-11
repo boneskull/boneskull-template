@@ -29,6 +29,15 @@
     "worktrees"
   ],
   "ignoreRandomStrings": true,
-  "ignoreWords": ["boneskull"],
-  "words": ["shankle", "picanha", "bupkis"]
+  "ignoreWords": [
+    "boneskull",
+    "wagoid",
+    "zshy",
+    "toshimaru",
+    "pids",
+    "jscoverage",
+    "wscript",
+    "bahmutov"
+  ],
+  "words": ["shankle", "picanha", "bupkis", "andouille"]
 }

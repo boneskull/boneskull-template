@@ -3,20 +3,22 @@ name: Node CI
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+  test:
+    env:
+      FORCE_COLOR: '1'
+    name: Build & Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [14, 16, 18]
-        os: [ubuntu-latest]
+        include:
+          - node-version: '20'
+          - node-version: '22'
+          - node-version: '24'
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: ./.github/actions/prepare
         with:
-          version: ${{ matrix.node_version }}
-      - name: npm install
-        uses: bahmutov/npm-install@v1
-      - name: test
+          node-version: ${{ matrix.node-version }}
+      - name: Test
         run: npm test

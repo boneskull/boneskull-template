@@ -2,17 +2,17 @@
 
 > JUST THE WAY I LIKE IT
 
-Bacon ipsum dolor amet fatback swine hamburger ham short loin, brisket leberkas alcatra tenderloin filet mignon kevin frankfurter t-bone cupim turducken.
+This is my template for new Node.js projects. It is the best one.
 
 ## Install
 
 ```shell
-$ npm install PACKAGENAME
+npm install PACKAGENAME
 ```
 
 ## Usage
 
-Alcatra pancetta meatball, leberkas ball tip cupim drumstick tongue strip steak.
+Use as a GitHub template.
 
 ## Tooling
 
@@ -30,12 +30,16 @@ This template includes:
 - **markdownlint** - Markdown linting
 - **knip** - Find unused dependencies
 - **Renovate** - Automated dependency updates
+- **zshy** - Dual-module TS builds
 
 ## Development
 
 ```bash
 # Install dependencies
 npm install
+
+# Build
+npm run build
 
 # Run tests
 npm test

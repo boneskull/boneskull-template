@@ -11,11 +11,25 @@
   "license": "BlueOak-1.0.0",
   "private": true,
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.19.0"
   },
-  "main": "src/index.js",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.cts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "scripts": {
+    "build": "zshy",
     "commitlint": "commitlint",
     "fix": "run-s -sl fix:*",
     "fix:eslint": "eslint --fix .",
@@ -27,13 +41,12 @@
     "lint:knip": "knip",
     "lint:markdown": "markdownlint-cli2 \"**/*.md\"",
     "lint:prettier": "prettier --check .",
-    "lint:spelling": "cspell .",
+    "lint:spelling": "cspell . \"./.*/**\"",
     "lint:types": "tsc --noEmit",
-    "prepare": "husky",
+    "prepare": "husky; run-s -s build",
     "test": "run-s test:runtime test:types",
-    "test:runtime": "node --import tsx --test --test-reporter=spec \"test/**/*.test.ts\" \"test/**/*.test.js\"",
-    "test:types": "tsc --noEmit",
-    "test:watch": "node --import tsx --test --test-reporter=spec --watch \"test/**/*.test.ts\" \"test/**/*.test.js\""
+    "test:runtime": "node --import tsx --test --test-reporter=spec \"test/**/*.test.ts\"",
+    "test:watch": "node --import tsx --test --test-reporter=spec --watch \"test/**/*.test.ts\""
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
@@ -59,12 +72,13 @@
     "prettier-plugin-sort-json": "4.1.1",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.4"
+    "typescript-eslint": "8.46.4",
+    "zshy": "0.4.4"
   },
   "knip": {
     "ignore": [
       "**/*.d.ts",
-      "worktrees/**/*"
+      ".worktrees/**/*"
     ],
     "tags": [
       "-knipignore"
@@ -97,5 +111,11 @@
     ],
     "singleQuote": true,
     "tsdoc": true
+  },
+  "zshy": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./package.json": "./package.json"
+    }
   }
 }
