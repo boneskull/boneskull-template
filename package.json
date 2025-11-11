@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/boneskull/packagename"
   },
-  "license": "Apache-2.0",
+  "license": "BlueOak-1.0.0",
   "author": "Christopher Hiller <boneskull@boneskull.com> (https://boneskull.com/)",
   "main": "src/index.js",
   "scripts": {
