@@ -33,6 +33,7 @@
     "commitlint": "commitlint",
     "fix": "run-s -sl fix:*",
     "fix:eslint": "eslint --fix .",
+    "fix:markdown": "markdownlint-cli2 --fix \"**/*.md\"",
     "fix:pkg": "npm pkg fix",
     "fix:prettier": "prettier --write . && markdownlint-cli2 --fix \"**/*.md\"",
     "lint": "run-p -sl --aggregate-output lint:*",
@@ -44,7 +45,7 @@
     "lint:spelling": "cspell . \"./.*/**\"",
     "lint:types": "tsc --noEmit",
     "prepare": "husky; run-s -s build",
-    "test": "run-s test:runtime test:types",
+    "test": "run-s test:runtime",
     "test:runtime": "node --import tsx --test --test-reporter=spec \"test/**/*.test.ts\"",
     "test:watch": "node --import tsx --test --test-reporter=spec --watch \"test/**/*.test.ts\""
   },
