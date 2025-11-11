@@ -76,6 +76,9 @@
     "zshy": "0.4.4"
   },
   "knip": {
+    "ignoreDependencies": [
+      "markdownlint-cli2-formatter-pretty"
+    ],
     "ignore": [
       "**/*.d.ts",
       ".worktrees/**/*"
