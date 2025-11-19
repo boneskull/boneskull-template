@@ -1,4 +1,3 @@
-// @ts-check
 import jsPlugin from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
@@ -114,7 +113,7 @@ export default defineConfig(
     },
   },
   {
-    files: ['*.js', '.*.js', 'scripts/*.js'],
+    files: ['*.js', 'scripts/**/*.js'],
     languageOptions: {
       globals: globals.node,
     },
@@ -127,12 +126,12 @@ export default defineConfig(
   /** @type {any} */ (eslintPluginJsonc.configs['flat/prettier'][2]),
   {
     ignores: [
-      'docs',
-      'dist',
+      '**/docs/**',
+      '**/dist/**',
       'coverage',
-      '*.snapshot',
-      '.tmp/**/*',
-      'worktrees/**/*',
+      '**/*.snapshot',
+      '**/.tmp/**/*',
+      '.worktrees/**/*',
     ],
   },
 );
