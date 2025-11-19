@@ -39,7 +39,8 @@
     "jscoverage",
     "wscript",
     "bahmutov",
-    "huskyrc"
+    "huskyrc",
+    "commitlintrc"
   ],
   "words": ["shankle", "picanha", "bupkis", "andouille"]
 }
