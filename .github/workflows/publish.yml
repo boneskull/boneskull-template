@@ -9,10 +9,16 @@ permissions:
 
 jobs:
   publish:
+    env:
+      token: ${{ secrets.NPM_TOKEN }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - if: ${{ env.token == '' }}
+        run: echo "NPM_TOKEN is not set"
+      - if: ${{ env.token != '' }}
+        name: Checkout Repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      - uses: ./.github/actions/publish
+      - if: ${{ env.token != '' }}
+        uses: ./.github/actions/publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
