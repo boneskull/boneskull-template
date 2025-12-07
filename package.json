@@ -71,7 +71,7 @@
     "prettier-plugin-jsdoc": "1.7.0",
     "prettier-plugin-pkg": "0.21.2",
     "prettier-plugin-sort-json": "4.1.1",
-    "tsx": "4.20.6",
+    "tsx": "4.21.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.4",
     "zshy": "0.4.4"
