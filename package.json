@@ -74,7 +74,7 @@
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.4",
-    "zshy": "0.4.4"
+    "zshy": "0.6.0"
   },
   "knip": {
     "ignoreDependencies": [
