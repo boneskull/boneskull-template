@@ -40,7 +40,9 @@
     "wscript",
     "bahmutov",
     "huskyrc",
-    "commitlintrc"
+    "commitlintrc",
+    "zizmor",
+    "zizmorcore"
   ],
   "words": ["shankle", "picanha", "bupkis", "andouille"]
 }

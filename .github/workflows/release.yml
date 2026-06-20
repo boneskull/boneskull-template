@@ -8,17 +8,18 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  # enable for publishing
-  #id-token: write
+permissions: {}
 
 jobs:
   release-please:
     name: Release Please
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      # enable for publishing
+      #id-token: write
     steps:
       - run: echo "Release Please is disabled"
       # - name: Create Release
