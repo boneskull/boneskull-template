@@ -8,12 +8,11 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   jsPlugin.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
   perfectionist.configs['recommended-natural'],
   {
     languageOptions: {
       parserOptions: {
-        extraFileExtensions: ['.json5', '.jsonc'],
         project: 'tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
       },
@@ -104,7 +103,7 @@ export default defineConfig(
     },
   },
   {
-    files: ['test/**/*.test.ts', 'test/**/*.test.js'],
+    files: ['**/test/**/*.test.ts', '**/test/**/*.test.js'],
     rules: {
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -113,17 +112,18 @@ export default defineConfig(
     },
   },
   {
-    files: ['*.js', 'scripts/**/*.js'],
+    files: ['*.js', '**/scripts/**/*.js'],
     languageOptions: {
       globals: globals.node,
     },
   },
-  /** @type {any} */ (eslintPluginJsonc.configs['flat/prettier'][0]),
-  /** @type {any} */ ({
-    ...eslintPluginJsonc.configs['flat/prettier'][1],
-    extends: [tseslint.configs.disableTypeChecked],
-  }),
-  /** @type {any} */ (eslintPluginJsonc.configs['flat/prettier'][2]),
+  {
+    extends: [
+      eslintPluginJsonc.configs['flat/prettier'],
+      tseslint.configs.disableTypeChecked,
+    ],
+    files: ['**/*.json', '**/*.json5', '**/*.jsonc'],
+  },
   {
     ignores: [
       '**/docs/**',
