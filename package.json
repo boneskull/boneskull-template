@@ -11,7 +11,7 @@
   "license": "BlueOak-1.0.0",
   "private": true,
   "engines": {
-    "node": "^22.13.0 || ^24.0.0 || ^26.0.0"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.cts",
