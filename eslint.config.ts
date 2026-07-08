@@ -122,7 +122,7 @@ export default defineConfig(
       eslintPluginJsonc.configs['flat/prettier'],
       tseslint.configs.disableTypeChecked,
     ],
-    files: ['**/*.json', '**/*.json5', '**/*.jsonc'],
+    files: ['**/tsconfig*.json', '**/*.json5', '**/*.jsonc'],
   },
   {
     ignores: [
