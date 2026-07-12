@@ -61,8 +61,8 @@
     "bupkis": "0.14.0",
     "cspell": "9.8.0",
     "eslint": "10.6.0",
-    "eslint-plugin-jsonc": "3.2.0",
-    "eslint-plugin-perfectionist": "5.9.1",
+    "eslint-plugin-jsonc": "3.3.0",
+    "eslint-plugin-perfectionist": "5.10.0",
     "globals": "17.7.0",
     "husky": "9.1.7",
     "installed-check": "10.0.1",
@@ -76,7 +76,7 @@
     "prettier-plugin-pkg": "0.22.1",
     "tsx": "4.23.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.62.1",
+    "typescript-eslint": "8.63.0",
     "zshy": "0.7.3"
   },
   "allowScripts": {
