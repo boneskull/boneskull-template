@@ -4,7 +4,8 @@ description: Publish to npm
 inputs:
   token:
     description: 'npm token'
-    required: true
+    required: false
+    default: ''
 
 runs:
   steps:
@@ -22,7 +23,11 @@ runs:
     - uses: ./.github/actions/prepare
     - name: Publish to npm
       env:
-        NODE_AUTH_TOKEN: ${{ inputs.token }}
-      run: npm publish --provenance --access public --registry https://registry.npmjs.org
+        INPUT_TOKEN: ${{ inputs.token }}
+      run: |
+        if [ -z "$INPUT_TOKEN" ]; then
+          export NODE_AUTH_TOKEN="${{ inputs.token }}"
+        fi
+        npm publish --provenance --access public --registry https://registry.npmjs.org --token $INPUT_TOKEN
       shell: bash
   using: composite
