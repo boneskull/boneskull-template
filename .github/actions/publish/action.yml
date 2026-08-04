@@ -28,6 +28,6 @@ runs:
         if [ -z "$INPUT_TOKEN" ]; then
           export NODE_AUTH_TOKEN="${{ inputs.token }}"
         fi
-        npm publish --provenance --access public --registry https://registry.npmjs.org --token $INPUT_TOKEN
+        npm publish --provenance --access public --registry https://registry.npmjs.org
       shell: bash
   using: composite
