@@ -10,6 +10,7 @@
     'helpers:pinGitHubActionDigests',
     ':configMigration',
     ':automergeDigest',
+    ':automergePatch',
     ':automergeMinor',
   ],
   labels: ['dependencies'],
