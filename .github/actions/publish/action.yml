@@ -26,7 +26,7 @@ runs:
         INPUT_TOKEN: ${{ inputs.token }}
       run: |
         if [ -z "$INPUT_TOKEN" ]; then
-          export NODE_AUTH_TOKEN="${{ inputs.token }}"
+          export NODE_AUTH_TOKEN="${INPUT_TOKEN}"
         fi
         npm publish --provenance --access public --registry https://registry.npmjs.org
       shell: bash
