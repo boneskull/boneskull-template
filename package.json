@@ -84,13 +84,6 @@
     "fsevents@2.3.3": true
   },
   "knip": {
-    "ignoreDependencies": [
-      "markdownlint-cli2-formatter-pretty"
-    ],
-    "ignore": [
-      "**/*.d.ts",
-      ".worktrees/**/*"
-    ],
     "tags": [
       "-knipignore"
     ]
