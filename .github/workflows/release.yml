@@ -13,22 +13,21 @@ permissions: {}
 
 jobs:
   release-please:
+    # remove below line to enable
+    if: false
     name: Release Please
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
       issues: write
-      # enable for publishing
-      #id-token: write
+      id-token: write
     steps:
-      - run: echo "Release Please is disabled"
-      # - name: Create Release
-      #  if: ${{ github.event_name != 'workflow_dispatch' }}
-      #  id: release
-      #  uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
-      #- if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
-      #  uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      # Enable for publishing
-      #- if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
-      #  uses: ./.github/actions/publish
+      - name: Create Release
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        id: release
+        uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
+      - if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
+        uses: ./.github/actions/publish
