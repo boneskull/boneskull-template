@@ -53,8 +53,8 @@
     "test:watch": "nub --test --test-reporter=spec --watch \"test/**/*.test.ts\""
   },
   "devDependencies": {
-    "@commitlint/cli": "21.2.2",
-    "@commitlint/config-conventional": "21.2.2",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "@eslint/js": "10.0.1",
     "@nubjs/nub": "0.9.2",
     "@stylistic/eslint-plugin": "5.10.0",
