@@ -56,7 +56,7 @@
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
     "@eslint/js": "10.0.1",
-    "@nubjs/nub": "0.9.5",
+    "@nubjs/nub": "0.9.6",
     "@stylistic/eslint-plugin": "5.10.0",
     "@types/node": "24.19.0",
     "bupkis": "1.1.0",
